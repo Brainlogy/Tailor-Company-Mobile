@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:tailor_company_mobile/constants/route_constants.dart';
 import 'package:tailor_company_mobile/routes.dart';
 
 class BaseScreen extends StatelessWidget {
@@ -20,8 +22,14 @@ class BaseScreen extends StatelessWidget {
               }
               return Scaffold();
             },
-            initialRoute: "home",
-            routes: { ...routes },
+            //future
+
+            theme: ThemeData(
+              textTheme:
+                  GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme),
+            ),
+            initialRoute: RouteConstants.splashScreen,
+            routes: {...routes},
             debugShowCheckedModeBanner: false,
             navigatorObservers: [],
           );
