@@ -1,0 +1,8 @@
+class RouteConstants {
+  static const String splashScreen = "SplashScreen";
+  static const String signInScreen = "SignInScreen";
+  static const String welcomeScreen = "WelcomeScreen";
+  static const String registerScreen = "RegisterScreen";
+  static const String otpScreen = "OTPScreen";
+  static const String otpVerfiedScreen = "OTPVerifiedScreen";
+}
