@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tailor_company_mobile/constants/app_assets.dart';
 import 'package:tailor_company_mobile/constants/color_contants.dart';
+import 'package:tailor_company_mobile/constants/route_constants.dart';
 import 'package:tailor_company_mobile/constants/string_constants.dart';
 import 'package:tailor_company_mobile/widgets/action_button.dart';
 import 'package:tailor_company_mobile/widgets/plain_scaffold.dart';
@@ -56,7 +57,8 @@ class OTPVerifiedScreen extends StatelessWidget {
               width: width,
               label: StringConstants.completeSetup,
               theme: ActionButtonTheme.dark,
-              onClick: () {},
+              onClick: () => Navigator.of(context)
+                  .pushNamed(RouteConstants.dashboardScreen),
             )
           ],
         ),

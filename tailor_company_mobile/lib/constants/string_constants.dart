@@ -41,4 +41,13 @@ class StringConstants {
   static const String numberVerified =
       "Your mobile number has been verified successfully.";
   static const String completeSetup = "Complete Setup";
+
+  //Dashboard
+  static const String goodMorning = "Good morning!";
+  static const String soldProduct = "Sold Product";
+  static const String totalEarned = "Total Earned";
+  static const String newRequest = "New request";
+  static const String pendingOrders = "Pending orders";
+  static const String viewAll = "View all";
+  static const String seasonalBlogs = "Seasonal Blogs";
 }
