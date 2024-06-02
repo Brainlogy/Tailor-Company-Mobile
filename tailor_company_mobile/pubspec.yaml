@@ -40,6 +40,9 @@ dependencies:
   google_fonts: ^6.2.0
   flutter_form_builder: ^9.2.1
   reactive_forms: ^17.0.0
+  http: ^1.2.1
+  shared_preferences: ^2.2.3
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:
@@ -75,6 +78,11 @@ flutter:
     - assets/images/welcome_img.png
     - assets/images/otp_img.png
     - assets/images/otp_verified_img.png
+    - assets/images/arrow_outward.png
+    - assets/images/divider_needle.png
+    - assets/images/designer_image.jpg
+    - assets/images/no_image.png
+    - assets/images/season_pic.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
