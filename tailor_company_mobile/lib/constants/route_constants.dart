@@ -6,4 +6,5 @@ class RouteConstants {
   static const String otpScreen = "OTPScreen";
   static const String otpVerfiedScreen = "OTPVerifiedScreen";
   static const String dashboardScreen = "dashboardScreen";
+  static const String ordersSummary = "ordersSummaryScreen";
 }

@@ -1,5 +1,6 @@
 import 'package:tailor_company_mobile/constants/route_constants.dart';
 import 'package:tailor_company_mobile/screens/dashboard_screen.dart';
+import 'package:tailor_company_mobile/screens/orders_summary_screen.dart';
 import 'package:tailor_company_mobile/screens/otp_screen.dart';
 import 'package:tailor_company_mobile/screens/otp_verified_screen.dart';
 import 'package:tailor_company_mobile/screens/register_screen.dart';
@@ -15,4 +16,5 @@ Map routes = {
   RouteConstants.otpScreen: (context) => const OTPScreen(),
   RouteConstants.otpVerfiedScreen: (context) => const OTPVerifiedScreen(),
   RouteConstants.dashboardScreen: (context) => const DashboardScreen(),
+  RouteConstants.ordersSummary: (context) => const OredrsSummaryScreen(),
 };

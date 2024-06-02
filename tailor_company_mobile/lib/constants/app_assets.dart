@@ -14,4 +14,5 @@ class AppAssets {
   static const String designerImage = "assets/images/designer_image.jpg";
   static const String noImage = "assets/images/no_image.png";
   static const String seasonPic = "assets/images/season_pic.jpg";
+  static const String arrowForward = "assets/images/arrow_forward.png";
 }

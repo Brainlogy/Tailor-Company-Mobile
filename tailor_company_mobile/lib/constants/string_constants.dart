@@ -50,4 +50,12 @@ class StringConstants {
   static const String pendingOrders = "Pending orders";
   static const String viewAll = "View all";
   static const String seasonalBlogs = "Seasonal Blogs";
+
+  //Orders summary
+  static const String ordersSummary = "Orders Summary";
+  static const String searchOrders = "Search all orders";
+  static const String filter = "Filter";
+  static const String lastThreeMonths = "Last three months";
+  static const String orderID = "Order ID";
+  static const String reachedClient = "Reached to client on";
 }

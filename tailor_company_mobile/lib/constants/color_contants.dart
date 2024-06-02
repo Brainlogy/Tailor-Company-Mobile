@@ -13,4 +13,6 @@ class ColorConstants {
   static const Color lavenderSavor = Color.fromRGBO(234, 221, 255, 1);
   static const Color koeksister = Color.fromRGBO(234, 122, 84, 1);
   static const Color paleMuse = Color.fromRGBO(230, 224, 233, 1);
+  static const Color modestViolet = Color.fromRGBO(236, 230, 240, 1);
+  static const Color quicksilver = Color.fromRGBO(166, 166, 166, 1);
 }

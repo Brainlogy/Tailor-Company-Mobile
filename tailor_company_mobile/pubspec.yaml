@@ -83,6 +83,7 @@ flutter:
     - assets/images/designer_image.jpg
     - assets/images/no_image.png
     - assets/images/season_pic.jpg
+    - assets/images/arrow_forward.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

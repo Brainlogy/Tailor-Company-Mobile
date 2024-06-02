@@ -1,8 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:tailor_company_mobile/constants/app_assets.dart';
 import 'package:tailor_company_mobile/constants/color_contants.dart';
+import 'package:tailor_company_mobile/constants/route_constants.dart';
 import 'package:tailor_company_mobile/constants/string_constants.dart';
 import 'package:tailor_company_mobile/widgets/custom_scaffold.dart';
 import 'package:tailor_company_mobile/widgets/divider_needle.dart';
@@ -122,27 +121,33 @@ class _DashboardScreenState extends State<DashboardScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const ProductContainer(
-                    soldProduct: "12",
-                    totalEarned: "20000",
+                  const Expanded(
+                    child: ProductContainer(
+                      soldProduct: "12",
+                      totalEarned: "20000",
+                    ),
                   ),
                   const SizedBox(
                     width: 8,
                   ),
-                  Container(
-                    height: 92,
-                    alignment: Alignment.bottomCenter,
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 8, vertical: 14),
-                    decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: ColorConstants.primary,
-                    ),
-                    child: Image.asset(
-                      AppAssets.arrowOutward,
-                      height: 24,
-                      width: 24,
-                      fit: BoxFit.contain,
+                  InkWell(
+                    onTap: () => Navigator.pushNamed(
+                        context, RouteConstants.ordersSummary),
+                    child: Container(
+                      height: 92,
+                      alignment: Alignment.bottomCenter,
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 8, vertical: 14),
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: ColorConstants.primary,
+                      ),
+                      child: Image.asset(
+                        AppAssets.arrowOutward,
+                        height: 24,
+                        width: 24,
+                        fit: BoxFit.contain,
+                      ),
                     ),
                   )
                 ],

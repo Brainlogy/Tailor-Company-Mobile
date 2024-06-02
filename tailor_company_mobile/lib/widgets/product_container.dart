@@ -38,27 +38,25 @@ class ProductContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        height: 92,
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-          color: ColorConstants.primaryDim,
-        ),
-        child: IntrinsicHeight(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              _buildProductItem(StringConstants.soldProduct, soldProduct),
-              const VerticalDivider(
-                color: ColorConstants.lavenderSavor,
-                width: 10,
-                thickness: 1,
-              ),
-              _buildProductItem(StringConstants.totalEarned, "\$$totalEarned"),
-            ],
-          ),
+    return Container(
+      height: 92,
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 14),
+      decoration: const BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+        color: ColorConstants.primaryDim,
+      ),
+      child: IntrinsicHeight(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            _buildProductItem(StringConstants.soldProduct, soldProduct),
+            const VerticalDivider(
+              color: ColorConstants.lavenderSavor,
+              width: 10,
+              thickness: 1,
+            ),
+            _buildProductItem(StringConstants.totalEarned, "\$$totalEarned"),
+          ],
         ),
       ),
     );
