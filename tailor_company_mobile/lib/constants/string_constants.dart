@@ -58,4 +58,16 @@ class StringConstants {
   static const String lastThreeMonths = "Last three months";
   static const String orderID = "Order ID";
   static const String reachedClient = "Reached to client on";
+
+  //Order Requests
+  static const String orderRequests = "Orders Requests";
+  static const String noOfItems = "No. of items";
+  static const String orderData = "Order Date";
+  static const String price = "Price";
+  static const String size = "Size";
+  static const String client = "Client";
+  static const String acceptOrderBy = "Accept Order By";
+  static const String expectedDelivery = "Expected Delivery";
+  static const String moreDetails = "More Details";
+  static const String accept = "Accept";
 }
