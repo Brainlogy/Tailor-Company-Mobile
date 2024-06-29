@@ -22,6 +22,8 @@ class ProductImageContainer extends StatelessWidget {
         url,
         filterQuality: FilterQuality.high,
         fit: fit,
+        width: width,
+        height: height,
         errorBuilder: (context, error, stackTrace) {
           return Padding(
             padding: const EdgeInsets.all(10),

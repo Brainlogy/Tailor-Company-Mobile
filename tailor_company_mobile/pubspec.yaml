@@ -43,6 +43,7 @@ dependencies:
   http: ^1.2.1
   shared_preferences: ^2.2.3
   provider: ^6.1.2
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
@@ -84,6 +85,8 @@ flutter:
     - assets/images/no_image.png
     - assets/images/season_pic.jpg
     - assets/images/arrow_forward.png
+    - assets/images/arrow_down_ios.png
+    - assets/images/arrow_up_ios.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
