@@ -18,6 +18,7 @@ final dummy = [
     acceptOrderBy: DateTime.now(),
     expectedDilivery: DateTime.now(),
     totalPrice: 4000,
+    orders: [],
   ),
   OrderDetails(
     noOfItems: 2,
@@ -30,6 +31,7 @@ final dummy = [
     acceptOrderBy: DateTime.now(),
     expectedDilivery: DateTime.now(),
     totalPrice: 6000,
+    orders: [],
   ),
 ];
 
