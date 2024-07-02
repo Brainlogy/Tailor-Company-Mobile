@@ -3,7 +3,10 @@ import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:tailor_company_mobile/constants/app_assets.dart';
 import 'package:tailor_company_mobile/constants/color_contants.dart';
+import 'package:tailor_company_mobile/constants/route_constants.dart';
 import 'package:tailor_company_mobile/constants/string_constants.dart';
+import 'package:tailor_company_mobile/screens/order_status_screen.dart';
+import 'package:tailor_company_mobile/widgets/item_info_container.dart';
 import 'package:tailor_company_mobile/widgets/order_button.dart';
 import 'package:tailor_company_mobile/widgets/product_image_container.dart';
 
@@ -21,40 +24,54 @@ class OrderOverviewCard extends StatefulWidget {
 class _OrderOverviewCardState extends State<OrderOverviewCard> {
   bool showMore = false;
 
+  List<ValuePair> getData() {
+    return [
+      ValuePair(
+        key: StringConstants.noOfItems,
+        value: widget.details.noOfItems.toString(),
+      ),
+      if (showMore)
+        ValuePair(
+          key: StringConstants.size,
+          value: widget.details.size.join(', '),
+        ),
+      if (showMore)
+        ValuePair(
+          key: StringConstants.orderID,
+          value: widget.details.orderID.toString(),
+        ),
+      if (showMore)
+        ValuePair(
+          key: StringConstants.client,
+          value: widget.details.client,
+        ),
+      ValuePair(
+        key: StringConstants.orderData,
+        value: DateFormat('dd-MM-yyyy').format(widget.details.orderDate),
+      ),
+      if (showMore)
+        ValuePair(
+          key: StringConstants.acceptOrderBy,
+          value: DateFormat('dd-MM-yyyy').format(widget.details.acceptOrderBy),
+        ),
+      if (showMore)
+        ValuePair(
+          key: StringConstants.expectedDelivery,
+          value:
+              DateFormat('dd-MM-yyyy').format(widget.details.expectedDilivery),
+        ),
+      ValuePair(
+        key: StringConstants.price,
+        value: "₹${widget.details.totalPrice.toString()}",
+      ),
+    ];
+  }
+
   void handleToggle() => setState(
         () {
           showMore = !showMore;
         },
       );
-
-  Widget _buildRowContainer(
-      {required String key, required String value, Color? color}) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 2),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          SizedBox(
-            width: MediaQuery.of(context).size.width * 0.35,
-            child: Text(
-              key,
-              style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w400,
-                  color: color ?? ColorConstants.secondary),
-            ),
-          ),
-          Text(
-            value,
-            style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-                color: color ?? ColorConstants.secondary),
-          )
-        ],
-      ),
-    );
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -87,46 +104,15 @@ class _OrderOverviewCardState extends State<OrderOverviewCard> {
                           fontWeight: FontWeight.w600,
                           color: ColorConstants.primary),
                     ),
-                    _buildRowContainer(
-                      key: StringConstants.noOfItems,
-                      value: widget.details.noOfItems.toString(),
-                    ),
-                    if (showMore)
-                      _buildRowContainer(
-                        key: StringConstants.size,
-                        value: widget.details.size.join(', '),
+                    ...getData().map(
+                      (e) => ItemInfoContainer(
+                        label: e.key,
+                        value: e.value,
+                        widthRatio: 0.35,
+                        color: e.key == StringConstants.price
+                            ? ColorConstants.koeksister
+                            : null,
                       ),
-                    if (showMore)
-                      _buildRowContainer(
-                        key: StringConstants.orderID,
-                        value: widget.details.orderID.toString(),
-                      ),
-                    if (showMore)
-                      _buildRowContainer(
-                        key: StringConstants.client,
-                        value: widget.details.client,
-                      ),
-                    _buildRowContainer(
-                      key: StringConstants.orderData,
-                      value: DateFormat('dd-MM-yyyy')
-                          .format(widget.details.orderDate),
-                    ),
-                    if (showMore)
-                      _buildRowContainer(
-                        key: StringConstants.acceptOrderBy,
-                        value: DateFormat('dd-MM-yyyy')
-                            .format(widget.details.acceptOrderBy),
-                      ),
-                    if (showMore)
-                      _buildRowContainer(
-                        key: StringConstants.expectedDelivery,
-                        value: DateFormat('dd-MM-yyyy')
-                            .format(widget.details.expectedDilivery),
-                      ),
-                    _buildRowContainer(
-                      key: StringConstants.price,
-                      value: "₹7,000",
-                      color: ColorConstants.koeksister,
                     ),
                     if (showMore)
                       const SizedBox(
@@ -137,7 +123,9 @@ class _OrderOverviewCardState extends State<OrderOverviewCard> {
                         children: [
                           OrderButton(
                             title: StringConstants.moreDetails,
-                            onTap: () {},
+                            onTap: () => Navigator.of(context).pushNamed(
+                              RouteConstants.postOrderRequestScreen,
+                            ),
                           ),
                           const SizedBox(
                             width: 8,
@@ -145,7 +133,10 @@ class _OrderOverviewCardState extends State<OrderOverviewCard> {
                           OrderButton(
                             title: StringConstants.accept,
                             theme: OrderButtonTheme.dark,
-                            onTap: () {},
+                            onTap: () => Navigator.of(context).pushNamed(
+                              RouteConstants.orderStatusScreen,
+                              arguments: OrderStatus.accepted,
+                            ),
                           ),
                         ],
                       ),
@@ -179,6 +170,7 @@ class OrderDetails {
   final DateTime acceptOrderBy;
   final DateTime expectedDilivery;
   final double totalPrice;
+  final List<Order> orders;
 
   const OrderDetails({
     required this.noOfItems,
@@ -191,5 +183,32 @@ class OrderDetails {
     required this.acceptOrderBy,
     required this.expectedDilivery,
     required this.totalPrice,
+    required this.orders,
+  });
+}
+
+class Order {
+  final String imageUrl;
+  final String itemName;
+  final int productId;
+  final String size;
+  final int price;
+
+  const Order({
+    required this.imageUrl,
+    required this.itemName,
+    required this.productId,
+    required this.size,
+    required this.price,
+  });
+}
+
+class ValuePair {
+  final String key;
+  final String value;
+
+  const ValuePair({
+    required this.key,
+    required this.value,
   });
 }

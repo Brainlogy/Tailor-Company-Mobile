@@ -8,4 +8,6 @@ class RouteConstants {
   static const String dashboardScreen = "dashboardScreen";
   static const String ordersSummaryScreen = "ordersSummaryScreen";
   static const String orderRequestScreen = "orderRequestScreen";
+  static const String orderStatusScreen = "orderStatusScreen";
+  static const String postOrderRequestScreen = "postOrderRequestScreen";
 }

@@ -17,4 +17,7 @@ class AppAssets {
   static const String arrowForward = "assets/images/arrow_forward.png";
   static const String arrowDownIOS = "assets/images/arrow_down_ios.png";
   static const String arrowUpIOS = "assets/images/arrow_up_ios.png";
+  static const String orderStatus = "assets/images/order_status.png";
+  static const String orderAccepted = "assets/images/order_accepted.json";
+  static const String orderRejected = "assets/images/order_rejected.json";
 }

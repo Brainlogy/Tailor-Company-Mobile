@@ -70,4 +70,24 @@ class StringConstants {
   static const String expectedDelivery = "Expected Delivery";
   static const String moreDetails = "More Details";
   static const String accept = "Accept";
+
+  //Order Status
+  static const String orderAccepted = "Order Accepted";
+  static const String orderRejected = "Order Rejected";
+  static const String orderAcceptedMessage =
+      "The order has been accepted successfully.";
+  static const String orderRejectedMessage = "The order has been rejected.";
+
+  //Post Order Requset
+  static const String ordersAccepted = "Orders Accepted";
+  static const String orderAcceptedSuccessfully =
+      "The order accepted successfully.";
+  static const String theOrderRejected = "The order rejected.";
+  static const String acceptedOn = "Accepted on";
+  static const String rejectedOn = "Rejected on";
+  static const String productId = "Product ID";
+  static const String viewMoreRequests = "View More Requests";
+  static const String downloadOrderInvoice = "Download Order Invoice";
+  static const String acceptAll = "Accept All";
+  static const String rejectAll = "Reject All";
 }

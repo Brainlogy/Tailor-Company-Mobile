@@ -44,6 +44,7 @@ dependencies:
   shared_preferences: ^2.2.3
   provider: ^6.1.2
   carousel_slider: ^4.2.1
+  lottie: ^3.1.2
 
 dev_dependencies:
   flutter_test:
@@ -87,6 +88,9 @@ flutter:
     - assets/images/arrow_forward.png
     - assets/images/arrow_down_ios.png
     - assets/images/arrow_up_ios.png
+    - assets/images/order_status.png
+    - assets/images/order_accepted.json
+    - assets/images/order_rejected.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

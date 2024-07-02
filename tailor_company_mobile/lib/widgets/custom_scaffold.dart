@@ -21,6 +21,9 @@ class CustomScaffold extends StatelessWidget {
       body: body,
       appBar: showAppbar
           ? AppBar(
+              elevation: 0.5,
+              shadowColor: ColorConstants.primary,
+              backgroundColor: ColorConstants.white,
               leading: IconButton(
                 icon: const Icon(Icons.arrow_back),
                 onPressed: () {
