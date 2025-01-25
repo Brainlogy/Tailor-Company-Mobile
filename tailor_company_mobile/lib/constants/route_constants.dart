@@ -10,4 +10,5 @@ class RouteConstants {
   static const String orderRequestScreen = "orderRequestScreen";
   static const String orderStatusScreen = "orderStatusScreen";
   static const String postOrderRequestScreen = "postOrderRequestScreen";
+  static const String orderTrackScreen = "orderTrackScreen";
 }

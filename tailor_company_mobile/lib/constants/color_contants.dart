@@ -16,4 +16,5 @@ class ColorConstants {
   static const Color modestViolet = Color.fromRGBO(236, 230, 240, 1);
   static const Color quicksilver = Color.fromRGBO(166, 166, 166, 1);
   static const Color pastelPink = Color.fromRGBO(255, 216, 228, 1);
+  static const Color islamicGreen = Color.fromRGBO(0, 153, 0, 1);
 }

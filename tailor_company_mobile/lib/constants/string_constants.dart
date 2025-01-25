@@ -90,4 +90,11 @@ class StringConstants {
   static const String downloadOrderInvoice = "Download Order Invoice";
   static const String acceptAll = "Accept All";
   static const String rejectAll = "Reject All";
+
+  //Order Track Screen
+  static const String accepted = 'Accepted';
+  static const String shipped = 'Shipped';
+  static const String delivered = 'Delivered';
+  static const String shippingAddress = 'Shipping Address';
+  static const String viewOrderInfo = 'View Order Info';
 }

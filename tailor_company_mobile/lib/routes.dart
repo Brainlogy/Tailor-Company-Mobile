@@ -3,6 +3,7 @@ import 'package:tailor_company_mobile/constants/route_constants.dart';
 import 'package:tailor_company_mobile/screens/dashboard_screen.dart';
 import 'package:tailor_company_mobile/screens/order_request_screen.dart';
 import 'package:tailor_company_mobile/screens/order_status_screen.dart';
+import 'package:tailor_company_mobile/screens/order_track_screen.dart';
 import 'package:tailor_company_mobile/screens/orders_summary_screen.dart';
 import 'package:tailor_company_mobile/screens/otp_screen.dart';
 import 'package:tailor_company_mobile/screens/otp_verified_screen.dart';
@@ -29,4 +30,5 @@ Map routes = {
   RouteConstants.postOrderRequestScreen: (context) => PostOrderRequestScreen(
       orderStatus:
           (ModalRoute.of(context)?.settings.arguments as OrderStatus?)),
+  RouteConstants.orderTrackScreen: (context) => const OrderTrackScreen(),
 };

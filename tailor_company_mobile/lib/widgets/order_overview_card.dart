@@ -92,7 +92,7 @@ class _OrderOverviewCardState extends State<OrderOverviewCard> {
                 width: 16,
               ),
               SizedBox(
-                width: 300,
+                width: 275,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
