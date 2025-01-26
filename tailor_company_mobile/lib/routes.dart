@@ -11,6 +11,7 @@ import 'package:tailor_company_mobile/screens/post_order_request_screen.dart';
 import 'package:tailor_company_mobile/screens/register_screen.dart';
 import 'package:tailor_company_mobile/screens/splash_screen.dart';
 import 'package:tailor_company_mobile/screens/sign_in_screen.dart';
+import 'package:tailor_company_mobile/screens/view_orders_info_screen.dart';
 import 'package:tailor_company_mobile/screens/welcome_screen.dart';
 
 Map routes = {
@@ -31,4 +32,6 @@ Map routes = {
       orderStatus:
           (ModalRoute.of(context)?.settings.arguments as OrderStatus?)),
   RouteConstants.orderTrackScreen: (context) => const OrderTrackScreen(),
+  RouteConstants.viewOrdersInfoScreen: (context) =>
+      const ViewOrdersInfoScreen(),
 };

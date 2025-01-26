@@ -96,5 +96,8 @@ class StringConstants {
   static const String shipped = 'Shipped';
   static const String delivered = 'Delivered';
   static const String shippingAddress = 'Shipping Address';
-  static const String viewOrderInfo = 'View Order Info';
+  static const String viewOrderInfo = 'View Orders Info';
+
+  //View Orders Info Screen
+  static const String totalOrders = "Total Orders";
 }

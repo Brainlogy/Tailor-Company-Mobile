@@ -2,6 +2,7 @@ import 'package:intl/intl.dart';
 import 'package:flutter/material.dart';
 import 'package:tailor_company_mobile/constants/app_assets.dart';
 import 'package:tailor_company_mobile/constants/color_contants.dart';
+import 'package:tailor_company_mobile/constants/route_constants.dart';
 import 'package:tailor_company_mobile/constants/string_constants.dart';
 import 'package:tailor_company_mobile/widgets/action_button.dart';
 import 'package:tailor_company_mobile/widgets/custom_scaffold.dart';
@@ -170,7 +171,8 @@ class _OrderTrackScreenState extends State<OrderTrackScreen> {
                 child: ActionButton(
                   width: double.infinity,
                   label: StringConstants.viewOrderInfo,
-                  onClick: () {},
+                  onClick: () => Navigator.pushNamed(
+                      context, RouteConstants.viewOrdersInfoScreen),
                 ),
               )
             ],
