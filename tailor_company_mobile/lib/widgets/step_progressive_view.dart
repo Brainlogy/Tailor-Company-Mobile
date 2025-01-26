@@ -77,9 +77,11 @@ class StepProgressView extends StatelessWidget {
   List<Widget> _titleViews() {
     var list = <Widget>[];
     _titles.asMap().forEach((i, text) {
+      var titleColor =
+          (i == 0 || _curStep > i) ? _activeColor : ColorConstants.secondary;
       list.add(Text(text,
-          style: const TextStyle(
-            color: ColorConstants.islamicGreen,
+          style: TextStyle(
+            color: titleColor,
             fontSize: 12,
             fontWeight: FontWeight.w500,
           )));
